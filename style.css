@@ -39,6 +39,10 @@ header .title {
     font-weight: 200;
 }
 
+#menuToggle {
+    visibility: hidden;
+}
+
 #menu-bar {
     margin: 0;
     padding: 0;
@@ -149,6 +153,14 @@ th, td {
         color: black;
         text-decoration: none;
         transition: background-color 1s;
+    }
+
+    #menuToggle {
+        visibility: visible;
+    }
+
+    #menuToggle:checked ~ .menu-bar {
+        left: 0;
     }
 }
 
