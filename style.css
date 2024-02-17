@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    /* background-color: rgb(57, 57, 57); */
+}
+
+html {
+    /* background-color: white; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 1.2vw;
+}
+header {
+    margin-top: 0;
+    display: block;
+    background-color: hsl(204, 95%, 70%);
+}
+header .title {
+    position: relative;
+    top: 0.5rem;
+    text-align: center;
+}
+
+#points {
+    display: inline;
+    position: relative;
+    left: 0.5rem;
+}
+#due {
+    /* display: inline-block; */
+    position: relative;
+    right: 0.5em;
+    float: right;
+}
+#version {
+    position: relative;
+    left: 0.5rem;
+    font-style: italic;
+    color: rgb(67, 68, 67);
+    font-weight: 200;
+}
+
+#menu-bar {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    background-color: #32aafb;
+}
+
+#menu-bar li {
+    display: inline;
+    padding: 0.5rem;
+    margin: 1rem;
+    list-style-type: none;
+}
+#menu-bar li a {
+    color: black;
+    text-decoration: none;
+    transition: background-color 1s;
+}
+#menu-bar li:hover {
+    background-color: rgb(141, 210, 247);
+}
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+}
+
+#title2 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+figure {
+    text-align: center;
+    color: #568aac;
+}
+figcaption {
+    color: purple;
+    font-weight: 200;
+}
+img {
+    max-width: 60%;
+    height: auto;
+}
+
+body h3 {
+    font-style: italic;
+    color: #749eba;
+    font-weight: 200;
+}
+
+body>#title {
+    text-align: center;
+}
+
+._black {
+    color: black;
+}
+
+table {
+    border-collapse: collapse;}  
+th, td {
+    border: 1px solid black;
+    padding: 9px;
+}
+.bold {
+    font-weight: bold;
+}
