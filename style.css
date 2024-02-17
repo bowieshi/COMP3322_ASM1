@@ -120,16 +120,44 @@ th, td {
 
 @media only screen and (max-width: 500px) {
     #menu-bar {
-        float: left;
+        margin: 0;
+        padding: 0;
+        position: sticky;
+        align-items: center;
+        left: -10rem;
+        width: 10rem;
+        background-color: #32aafb;
+        transition: left 0.3s;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    #menu-icon {
+        position: fixed;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    #menu-bar li {
+        padding: 0.5rem;
+        margin: 1rem;
+        list-style-type: none;
+    }
+    #menu-bar li a {
+        color: black;
+        text-decoration: none;
+        transition: background-color 1s;
     }
 }
 
 pre {
     overflow-x: auto;
     max-width: 100%;
-  }
+}
   
-  code {
+code {
     display: block;
     white-space: pre;
-  }
+}
