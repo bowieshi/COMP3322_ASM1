@@ -137,8 +137,8 @@ th, td {
         /* position: sticky; */
         align-items: center;
         /* left: -20rem; */
-        width: 5rem;
-        height: 20rem;
+        /* width: 5rem;
+        height: 20rem; */
         background-color: rgb(171, 235, 250);
         transition: left 0.3s;
         justify-content: space-around;
