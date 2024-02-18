@@ -139,8 +139,8 @@ th, td {
     }
     
     #menu-bar li {
-        padding: 0.5rem;
-        margin: 1rem;
+        padding: 0rem;
+        margin: 0rem;
         list-style-type: none;
     }
     #menu-bar li a {
@@ -148,6 +148,7 @@ th, td {
         text-decoration: none;
         transition: background-color 1s;
     }
+    
     .menu-icon {
         top: 1vw;
         right: 6vw;
