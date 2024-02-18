@@ -20,6 +20,7 @@ header .title {
 }
 
 #points {
+    margin-top: 1rem;
     display: block;
     position: relative;
     left: 1em;
@@ -134,7 +135,7 @@ th, td {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 350px) and (max-width: 500px) {
 
     html {
         /* background-color: white; */
@@ -150,7 +151,7 @@ th, td {
         position: fixed;
         top: 20%;
         left: -10rem;
-        align-items: center;
+        align-items: left;
         width: 10rem;
         height: 27vh;
         background-color: rgb(171, 235, 250);
