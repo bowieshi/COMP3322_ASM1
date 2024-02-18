@@ -1,13 +1,12 @@
 * {
-    margin: 0;
-    /* background-color: rgb(57, 57, 57); */
+    margin: 0vw;
 }
-
-html {
-    /* background-color: white; */
+header ~ * {
+    margin-top: 0vw;
+    margin-bottom: 0vw;
     margin-left: 5vw;
     margin-right: 5vw;
-    font-size: 1.2vw;
+    font-size: 1rem;
 }
 header {
     margin-top: 0;
@@ -21,27 +20,31 @@ header .title {
 }
 
 #points {
-    display: inline;
+    display: block;
     position: relative;
-    left: 0.5rem;
-}
-#due {
-    /* display: inline-block; */
-    position: relative;
-    right: 0.5em;
-    float: right;
+    left: 1em;
 }
 #version {
+    display: block;
     position: relative;
-    left: 0.5rem;
+    left: 1.6rem;
     font-style: italic;
     color: rgb(67, 68, 67);
     font-weight: 200;
 }
+#due {
+    display: block;
+    position: relative;
+    right: 1rem;
+    text-align: right;
+}
 
 #menuToggle {
-    position: absolute;
-    pointer-events: none;
+    display: none;
+}
+
+#menu-icon {
+    display: none;
 }
 
 #menu-bar {
@@ -57,10 +60,14 @@ header .title {
     background-color: #32aafb;
 }
 
+#menu-bar ul {
+    display: block;
+}
 #menu-bar li {
     display: inline;
-    padding: 0.5rem;
-    margin: 1rem;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    font-size: 1.5vw;
     list-style-type: none;
 }
 #menu-bar li a {
@@ -77,7 +84,8 @@ body {
 }
 
 #title2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -87,6 +95,7 @@ section {
 }
 
 figure {
+    margin: 1rem;
     text-align: center;
     color: #568aac;
 }
@@ -95,7 +104,8 @@ figcaption {
     font-weight: 200;
 }
 img {
-    max-width: 60%;
+    margin-top: 1rem;
+    max-width: 80%;
     height: auto;
 }
 
@@ -105,50 +115,63 @@ body h3 {
     font-weight: 200;
 }
 
-body>#title {
-    text-align: center;
-}
-
 ._black {
+    margin-bottom: 0.5rem;
     color: black;
 }
 
 table {
-    border-collapse: collapse;}  
+    border-collapse: collapse;
+}  
 th, td {
     border: 1px solid black;
     padding: 9px;
+}
+.point {
+    background-color: rgb(212, 210, 210);
 }
 .bold {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
+
     html {
         /* background-color: white; */
         margin-left: 0vw;
         margin-right: 0vw;
-        font-size: 1.2vw;
+        font-size: 1rem;
+    }
+    nav ~ *{
+        margin-left: 3vw;
+        margin-right: 3vw;
     }
     #menu-bar {
-        margin: 0;
-        padding: 0;
-        float: left;
-        /* position: sticky; */
+        position: fixed;
+        top: 20%;
+        left: -10rem;
         align-items: center;
-        /* left: -20rem; */
-        /* width: 5rem;
-        height: 20rem; */
+        width: 10rem;
+        height: 27vh;
         background-color: rgb(171, 235, 250);
-        transition: left 0.3s;
+        transition: left 1s;
         justify-content: space-around;
-        display: flex;
+        border-radius: 1rem;
     }
-    
+    #menu-bar ul {
+        padding: 0;
+        margin: 0;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        list-style-type: none;
+    }
     #menu-bar li {
-        padding: 0rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        padding: 0;
+        margin: 0;
+        display: block;
+        line-height: 3vh;
+        font-size: 2vh;
         list-style-type: none;
     }
     #menu-bar li a {
@@ -156,29 +179,51 @@ th, td {
         text-decoration: none;
         transition: background-color 1s;
     }
-
-    .menu-icon {
-        top: 1vw;
-        right: 6vw;
-        position: absolute;
-        visibility: visible;
-        width: 4vw;
-        height: 4vw;
-        background-image: url("images/menu-icon.ico");
-        background-size: cover;
-        cursor: pointer;
+    #menuToggle {
+        display: block;
+        top: 2vh;
+        right: 2vh;
+        position: fixed;
+        width: 3rem;
+        height: 4rem;
+        opacity: 0;
     }
-    #menuToggle:checked ~ #menu-bar {
-        left: 0;
+    #menu-icon {
+        display: inline-block;
+        top: 2vh;
+        right: 2vw;
+        position: fixed;
+        /* visibility: visible; */
+        width: 4rem;
+        height: 4rem;
+        opacity: 0.75;
+        background-image: url("images/menu-icon.ico");
+        /* background-size: cover; */
+        /* cursor: pointer; */
+    }
+    #menuToggle:focus ~ #menu-icon{
+        opacity: 1;
+    }
+    #menu-bar:has(~ #menuToggle:focus) {
+        left: 0rem;
+    }
+    table td {
+        display: block;
+        /* width: 100%; */
     }
 }
 
 pre {
-    overflow-x: auto;
-    max-width: 100%;
+    white-space: break-spaces;
+    word-wrap: break-word;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #f0f0f0;
+    border: 1px solid black;
 }
   
-code {
+/* code {
     display: block;
     white-space: pre;
-}
+} */
