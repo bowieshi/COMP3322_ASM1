@@ -129,8 +129,9 @@ th, td {
         padding: 0;
         position: sticky;
         align-items: center;
-        left: -10rem;
-        width: 10rem;
+        left: -20rem;
+        width: 20rem;
+        height: 40rem;
         background-color: #32aafb;
         transition: left 0.3s;
         justify-content: space-around;
