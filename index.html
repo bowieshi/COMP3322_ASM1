@@ -52,7 +52,7 @@
         </nav>
 
         <input type="checkbox" id="menuToggle">
-        <label for="menuToggle" id="menu-icon"></label>
+        <label for="menuToggle" id="menu-icon" tabindex="1"></label>
 
         <h2 id="title2">Programming Project - HTTP Proxy Server</h2>
         <article id="content">
@@ -61,7 +61,7 @@
                     <p>For this programming project, you are going to implement a web proxy server. This proxy server gets request messages from clients (web browsers), forwards the requests to target web server or another proxy server, obtains the corresponding response messages and sends the responses back to the clients. This proxy server should be able to handle all kinds of objects, not just HTML pages, but also images and audio files. Moreover, this proxy server should support persistent connections; a timeout timer should be used to terminate idle connection from client. To reduce the complexity of this programming project, the proxy server does not support caching mechanism.</p>
                     <figure>
                         <figcaption>Figure 1. HTTP Proxy Server</figcaption>
-                        <img src="images/image1.png" alt="image1" title="Figure 1. HTTP Proxy Server"/>
+                        <img src="images/image1.png" alt="http proxy server" title="Figure 1. HTTP Proxy Server"/>
                     </figure>
             </section>
 
@@ -84,7 +84,7 @@
                 <p>For example, below are the request/response messages sent by a web client (curl) to the server to download a web document:</p>
                 <figure>
                     <figcaption>Figure 2. Sample Web Request/Response messages</figcaption>
-                    <img src="images/image2.png" alt="image2" title="Figure 2. Sample Web Request/Response messages"/>
+                    <img src="images/image2.png" alt="Sample Web Request or Response messages" title="Figure 2. Sample Web Request/Response messages"/>
                 </figure>
                 <h3 class="sub_section">Non-Persistent Connection and Persistent Connection</h3>
                 <p>In HTTP 1.0, after the TCP connection was established, a single request was sent over and a single response was sent back. Then the TCP connection was released. Establishing a separate connection for each file request incurs expensive overhead. In view of this deficiency, HTTP 1.1 was designed to support persistent connections. In HTTP 1.1, it is possible to establish a TCP connection, sends a request and gets a response, and then sends additional requests and gets additional responses. Our proxy server should support persistent connections between web clients and itself as well as between itself and target web/proxy servers.</p>

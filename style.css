@@ -12,6 +12,7 @@ header {
     margin-top: 0;
     display: block;
     background-color: hsl(204, 95%, 70%);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 header .title {
     position: relative;
@@ -59,6 +60,7 @@ header .title {
     align-items: center;
     height: 3em;
     background-color: #32aafb;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
 }
 
 #menu-bar ul {
@@ -158,6 +160,7 @@ th, td {
         transition: left 1s;
         justify-content: space-around;
         border-radius: 1rem;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
     }
     #menu-bar ul {
         padding: 0;
@@ -181,7 +184,7 @@ th, td {
         transition: background-color 1s;
     }
     #menuToggle {
-        display: block;
+        display: none;
         top: 2vh;
         right: 2vh;
         position: fixed;
@@ -190,22 +193,30 @@ th, td {
         opacity: 0;
     }
     #menu-icon {
-        display: inline-block;
+        display: block;
         top: 2vh;
         right: 2vw;
         position: fixed;
         /* visibility: visible; */
         width: 4rem;
         height: 4rem;
-        opacity: 0.75;
+        opacity: 0.5;
         background-image: url("images/menu-icon.ico");
         /* background-size: cover; */
         /* cursor: pointer; */
     }
-    #menuToggle:focus ~ #menu-icon{
+    #menu_button{
+        display: block;
+        position: fixed;
+        top: 2vh;
+        right: 2vw;
+        width: 4rem;
+        height: 4rem;
+    }
+    #menu-icon:focus{
         opacity: 1;
     }
-    #menu-bar:has(~ #menuToggle:focus) {
+    #menu-bar:has(~ #menu-icon:focus) {
         left: 0rem;
     }
     table td {
