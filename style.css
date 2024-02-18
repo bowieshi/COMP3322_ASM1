@@ -124,15 +124,21 @@ th, td {
 }
 
 @media only screen and (max-width: 1000px) {
+    html {
+        /* background-color: white; */
+        margin-left: 0vw;
+        margin-right: 0vw;
+        font-size: 1.2vw;
+    }
     #menu-bar {
         margin: 0;
         padding: 0;
         float: left;
-        position: sticky;
+        /* position: sticky; */
         align-items: center;
         left: -20rem;
-        width: 20rem;
-        height: 40rem;
+        width: 10rem;
+        height: 20rem;
         background-color: #32aafb;
         transition: left 0.3s;
         justify-content: space-around;
