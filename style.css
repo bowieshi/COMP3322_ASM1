@@ -40,7 +40,8 @@ header .title {
 }
 
 #menuToggle {
-    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
 }
 
 #menu-bar {
@@ -135,14 +136,6 @@ th, td {
         justify-content: space-around;
         display: flex;
     }
-
-    #menu-icon {
-        position: fixed;
-        top: 0.5rem;
-        right: 0.5rem;
-        cursor: pointer;
-        z-index: 1;
-    }
     
     #menu-bar li {
         padding: 0.5rem;
@@ -154,12 +147,18 @@ th, td {
         text-decoration: none;
         transition: background-color 1s;
     }
-
-    #menuToggle {
+    .menu-icon {
+        top: 1vw;
+        right: 6vw;
+        position: absolute;
         visibility: visible;
+        width: 4vw;
+        height: 4vw;
+        background-image: url("images/menu-icon.ico");
+        background-size: cover;
+        cursor: pointer;
     }
-
-    #menuToggle:checked ~ .menu-bar {
+    #menuToggle:checked ~ #menu-bar {
         left: 0;
     }
 }
