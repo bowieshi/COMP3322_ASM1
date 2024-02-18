@@ -137,7 +137,7 @@ th, td {
         /* position: sticky; */
         align-items: center;
         left: -20rem;
-        width: 10rem;
+        width: 5rem;
         height: 20rem;
         background-color: #32aafb;
         transition: left 0.3s;
@@ -147,7 +147,7 @@ th, td {
     
     #menu-bar li {
         padding: 0rem;
-        margin: 0rem;
+        margin: 1rem;
         list-style-type: none;
     }
     #menu-bar li a {
