@@ -127,6 +127,7 @@ th, td {
     #menu-bar {
         margin: 0;
         padding: 0;
+        float: left;
         position: sticky;
         align-items: center;
         left: -20rem;
@@ -148,7 +149,7 @@ th, td {
         text-decoration: none;
         transition: background-color 1s;
     }
-    
+
     .menu-icon {
         top: 1vw;
         right: 6vw;
