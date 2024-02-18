@@ -136,10 +136,10 @@ th, td {
         float: left;
         /* position: sticky; */
         align-items: center;
-        left: -20rem;
+        /* left: -20rem; */
         width: 5rem;
         height: 20rem;
-        background-color: #32aafb;
+        background-color: rgb(171, 235, 250);
         transition: left 0.3s;
         justify-content: space-around;
         display: flex;
@@ -147,7 +147,8 @@ th, td {
     
     #menu-bar li {
         padding: 0rem;
-        margin: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         list-style-type: none;
     }
     #menu-bar li a {
