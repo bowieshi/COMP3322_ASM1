@@ -124,6 +124,9 @@ th, td {
 }
 
 @media only screen and (max-width: 500px) {
+    * {
+        background-color: black;
+    }
     #menu-bar {
         margin: 0;
         padding: 0;
