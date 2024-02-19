@@ -141,47 +141,47 @@ Request-message = request-line *(message-header CRLF) CRLF [ message-body ]</pre
                 </ul>
                 <p>Sample runs:</p>
                 <pre>
-    atctam@LinuxPC: > ./http_proxy 54321
-    http_proxy listening on port 54321
-    http_proxy got a NEW connection (1) from 147.8.175.181
-    Received Request from user: 349 bytes
-    Set up a connection to server i.cs.hku.hk
-    Requesting server:
-    GET http://i.cs.hku.hk/course/c0324/test/test-1.htm HTTP/1.1
-    Host: i.cs.hku.hk
-    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip, deflate
-    Proxy-Connection: keep-alive
-    ...
+atctam@LinuxPC: > ./http_proxy 54321
+http_proxy listening on port 54321
+http_proxy got a NEW connection (1) from 147.8.175.181
+Received Request from user: 349 bytes
+Set up a connection to server i.cs.hku.hk
+Requesting server:
+GET http://i.cs.hku.hk/course/c0324/test/test-1.htm HTTP/1.1
+Host: i.cs.hku.hk
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Proxy-Connection: keep-alive
+...
 
-    Received Response from Server: 263 bytes
-    Received Response from Server: 357 bytes
-    Received Response from Server: 0 bytes
-    Connection close by server : i.cs.hku.hk
+Received Response from Server: 263 bytes
+Received Response from Server: 357 bytes
+Received Response from Server: 0 bytes
+Connection close by server : i.cs.hku.hk
 
-    Timeout - Persistent Connection (1) Closed</pre>
+Timeout - Persistent Connection (1) Closed</pre>
                 <p>OR</p>
                 <pre>
-    atctam@LinuxPC: > ./http_proxy 54321 proxy.cs.hku.hk:8282
-    http_proxy listening on port 54321
-    http_proxy got a NEW connection (1) from 147.8.175.181
-    Received Request from user: 349 bytes
-    Set up a connection to server proxy.cs.hku.hk
-    Requesting server:
-    GET http://i.cs.hku.hk/course/c0324/test/test-1.htm HTTP/1.1
-    Host: i.cs.hku.hk
-    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip, deflate
-    Proxy-Connection: keep-alive
-    ...
+atctam@LinuxPC: > ./http_proxy 54321 proxy.cs.hku.hk:8282
+http_proxy listening on port 54321
+http_proxy got a NEW connection (1) from 147.8.175.181
+Received Request from user: 349 bytes
+Set up a connection to server proxy.cs.hku.hk
+Requesting server:
+GET http://i.cs.hku.hk/course/c0324/test/test-1.htm HTTP/1.1
+Host: i.cs.hku.hk
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Proxy-Connection: keep-alive
+...
 
-    Received Response from Server: 761 bytes
+Received Response from Server: 761 bytes
 
-    Timeout - Persistent Connection (1) Closed</pre>
+Timeout - Persistent Connection (1) Closed</pre>
                 <h3 class="sub_section">Test cases</h3>
                 <p>We will use (1) Firefox and (2) Chrome to connect to the following web sites for testing of your proxy program.</p>
                 <ol>
