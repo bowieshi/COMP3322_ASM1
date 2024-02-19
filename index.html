@@ -10,13 +10,12 @@
 
     <body>
         <header id="Top">
-            <!-- <img sec="images/menu-icon.ico" alt="icon"> -->
             <h1 class="title">CSIS0234 Computer Networks</h1>
             <h1 class="title">Programming Project</h1>
     
             <h2 id="points">Total 15 points</h2>
             <h3 id="version">Version 1.1</h3>
-            <h2 id="due">Due date: 5:00pm April 29, 20xx</h2>
+            <h2 id="due">Due date: 5:00pm April 29, 2024</h2>
         </header>
 
         <nav id="menu-bar">
@@ -79,8 +78,8 @@
                 <p>HTTP is the transfer protocol used throughout the WWW. The HTTP protocol is a request/response protocol. When a client opens a connection, it immediately sends its request for a file. The web server then responds with the file or an error message. Each interaction consists of one request and one reply. Both are MIME-like message (MIME: The Multipurpose Internet Mail Extensions).</p>
                 <p>Each request message includes a request line, a few header lines, a blank line, and the possible message body. Similar is the response message.</p>
                 <pre>
-    Response-message = status-line *(message-header CRLF) CRLF [ message-body ]
-    Request-message = request-line *(message-header CRLF) CRLF [ message-body ]</pre>
+Response-message = status-line *(message-header CRLF) CRLF [ message-body ]
+Request-message = request-line *(message-header CRLF) CRLF [ message-body ]</pre>
                 <p>For example, below are the request/response messages sent by a web client (curl) to the server to download a web document:</p>
                 <figure>
                     <figcaption>Figure 2. Sample Web Request/Response messages</figcaption>
@@ -129,7 +128,7 @@
                 <h3 class="sub_section">How to start the HTTP proxy process</h3>
                 <p>The http_proxy should be invoked as follow:</p>
                 <pre>
-    ./http_proxy myport [proxy_server:port]</pre>
+./http_proxy myport [proxy_server:port]</pre>
                 <p>The 1<sup>st</sup> parameter – myport is the port number that the http_proxy is listening on. The 2<sup>nd</sup> parameter –proxy_server:port is an optional argument. When proxy_server:port is specified, all the HTTP requests (responses) should be forwarded to (received from) proxy_server. The port in proxy_server:port is the port number that the proxy_server is listening on. </p>
                 <h3 class="sub_section">Output messages</h3>
                 <p>To aid your programming and debugging, please print some log information to the screen. You are required to generate some output with major events:</p>
